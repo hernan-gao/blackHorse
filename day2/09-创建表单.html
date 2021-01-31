@@ -8,12 +8,33 @@
 </head>
 
 <body>
-    <input type="text">
-    <input type="password">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
+    <!--form表单域的作用，汇总所有的值，一次传到后台。也是reset和-->
+    <form action="#">
+        <input type="text">
+        <input type="password">
+        <!--name主要用于区分表单，在后台接收是必要的-->
+        <!--这里的单选radio即是通过name定为一个表单-->
+        <input type="radio" name="name1">
+        <input type="radio" name="name1" checked="checked">
+        <input type="checkbox" name="name2">
+        <input type="checkbox" name="name2">
+        <input type="checkbox" name="name2">
+        <input type="button" value="按钮">
+        <input type="submit">
+        <input type="reset">
+        <input type="image" src="">
+        <input type="file">
+        <!--label的两种用法，实现点击标签即可把光标定位到指定表单-->
+        <label><input type="text"></label>
+        <label for="id"></label><input type="text" id="id">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <!--下拉列表-->
+        <select name="" id="">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+        </select>
+    </form>
 </body>
 
 </html>
