@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--cellspaceing单元格外部边距 cellppadding单元格内部边距-->
+    <table align="center" cellspaceing="5" cellpadding="10" border="1" width="200" sheight="50">
+        <caption>表格标题</caption>
+        <tr>
+            <th>标题1</th>
+            <th>标题1</th>
+            <th colspan="2">标题1</th>
+        </tr>
+        <tr>
+            <!--rowspan跨行合并 colspan跨列合并  注意：是跨合并！-->
+            <td colspan="2">单元格1</td>
+            <td rowspan="2">单元格1</td>
+            <td>单元格1</td>
+        </tr>
+        <tr>
+            <td>单元格2</td>
+            <td>单元格2</td>
+            <td>单元格2</td>
+        </tr>
+        <tr>
+            <td>单元格3</td>
+            <td>单元格3</td>
+            <td colspan="2">单元格3</td>
+        </tr>
+    </table>
+</body>
+
+</html>
