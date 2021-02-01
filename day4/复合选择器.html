@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">内部链接</a>
+        <a href="#">内部链接</a>
+        <a href="#">内部链接</a>
+    </div>
+    <a href="#">外部链接</a>
+    <a href="#">外部链接</a>
+    <a href="#">外部链接</a>
+    <ul>
+        <li>列表</li>
+        <li>列表</li>
+        <li>列表</li>
+    </ul>
+    <p class="red">红色</p>
+    <p class="blue">蓝色</p>
+    <a class="a1" href="#">未访问</a>
+    <a class="a2" href="#">已访问</a>
+    <a class="a3" href="#">经过</a>
+    <a class="a4" href="#">选定</a>
+</body>
+<style>
+    /* 后代 */
+    
+    .nav a {
+        color: red;
+    }
+    /* 子 */
+    
+    ul>li {
+        color: green;
+    }
+    /* 交集 */
+    
+    p.red {
+        color: red;
+    }
+    /* 并集 */
+    
+    p.red,
+    p.blue {
+        font-size: 100px;
+    }
+    /* 伪类 */
+    
+    .a1:link {
+        color: black;
+    }
+    
+    .a2:visited {
+        color: orange;
+    }
+    
+    .a3:hover {
+        color: pink;
+    }
+    
+    .a4:active {
+        color: purple;
+    }
+</style>
+
+</html>
