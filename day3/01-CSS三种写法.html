@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--外部，实现分离的同时，更复用-->
+    <link rel="stylesheet" href="#">
+</head>
+
+<body>
+    <!--内联，不分离，最不推荐。权重最高-->
+    <h1 style="color: red;">123</h1>
+
+</body>
+<style>
+    /* 内部，实现了分离 */
+    
+    h1 {
+        color: yellow
+    }
+</style>
+
+</html>
