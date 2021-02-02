@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="test1">层叠性</div>
+    <div class="test2">
+        <p>继承性</p>
+    </div>
+    <div class="test3">优先级</div>
+    <div id="test3" class="test3">优先级</div>
+    <div id="test3" class="test3" style="color: orange;">优先级</div>
+
+    <div class="nav">
+        <a href="#" class="first">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+    </div>
+</body>
+<style>
+    .test1 {
+        color: red;
+    }
+    
+    .test1 {
+        color: yellow;
+    }
+    
+    .test2 {
+        color: blue;
+        /* -text -font -line color */
+    }
+    
+    #test3 {
+        color: purple;
+    }
+    
+    .test3 {
+        color: green;
+    }
+    
+    div {
+        color: black
+    }
+    
+    div {
+        /* color: pink!important; */
+    }
+    
+    .nav a {
+        color: red;
+    }
+    
+    .first {
+        color: yellow;
+        /* .first无法变色，权重问题， .nav a权重是1,1 .fist权重是1,0 */
+    }
+    
+    .nav .first {
+        color: orange;
+        /* 权重叠加.nav .first 权重是2,0 */
+    }
+</style>
+
+</html>
