@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>普通定位</div>
+    <div>普通定位</div>
+    <div>
+        <span>普通定位</span>
+        <span>普通定位</span>
+    </div>
+    <div class="float1">浮动布局</div>
+    <div>普通布局</div>
+    <div>前面的普通布局因为前者浮动，会往上补，然后被覆盖了</div>
+    <div>普通布局</div>
+    <div class="float2">浮动布局</div>
+    <div class="float2">浮动布局</div>
+    <div class="float-no-height clearfix">
+        <div class="float1">为避免浮动覆盖，可以添加一个标准流的父元素。但浮动流子元素不会撑开父元素</div>
+        <!--加一个普通流的空标签也可以解决浮动父元素无高度问题-->
+        <div style="clear: both;"></div>
+    </div>
+    <div>普通布局</div>
+</body>
+<style>
+    div {
+        width: 300px;
+        height: 50px;
+        background-color: greenyellow;
+    }
+    
+    .float1 {
+        float: left;
+    }
+    
+    .float2 {
+        float: right;
+    }
+    
+    .float-no-height {
+        /* overflow: hidden; */
+        /* clear: both; */
+    }
+    /* 伪元素解决方案，相当于CSS的额外标签法，不破坏HTML结构，最为推荐 */
+    
+    .clearfix:after {
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+    
+    .clearfix {
+        *zoom: 1;
+        /* IE6 7 清除浮动 */
+    }
+</style>
+
+</html>
