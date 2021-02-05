@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="absolute">居中定位，left50% margin-left: 盒子宽度一半</div>
+    <div class="z z1">z-index:3</div>
+    <div class="z z2">z-index:2</div>
+    <div class="z z3">z-index:1</div>
+    <span style="position: absolute;top: 200px; width: 100px; height: 100px; background-color: green"></span>
+    <div style="margin-top: 500px;width: 300px; height: 300px; background-color: yellow;">
+        <div style="position: absolute; margin-top: 50px; margin-left: 50px; width: 100px; height: 100px; background-color: red;">定位可解决margin上下塌陷问题</div>
+    </div>
+</body>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: pink
+    }
+    
+    .absolute {
+        position: absolute;
+        /* margin: 0 auto;无效 */
+        left: 50%;
+        margin-left: -50px;
+        top: 50%;
+        margin-top: -50px;
+    }
+    
+    .z {
+        position: absolute;
+    }
+    
+    .z1 {
+        left: 50px;
+        top: 50px;
+        background-color: blue;
+        z-index: 3;
+    }
+    
+    .z2 {
+        left: 100px;
+        top: 100px;
+        background-color: yellow;
+        z-index: 2;
+    }
+    
+    .z3 {
+        left: 150px;
+        top: 150px;
+        background-color: red;
+        z-index: 1;
+    }
+</style>
+
+</html>

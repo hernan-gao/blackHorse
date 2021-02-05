@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="relative">相对定位，相对原来位置偏移</div>
+    <div>虽然位置偏移，但是原先位置仍然有效，不会被后排占有</div>
+    <div class="relative-grdf">
+        <div class="relative-far">
+            <div class="absolute">绝对定位，以有定位的父级元素为锚，脱标</div>
+        </div>
+    </div>
+    <div class="fixed">固定定位，以浏览器可视窗口为锚，跟父级元素没关系，不随滚动条滚动，脱标</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+</body>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    
+    .relative {
+        position: relative;
+        left: 100px;
+        top: 100px;
+    }
+    
+    .absolute {
+        position: absolute;
+        top: 0;
+        left: 300px;
+    }
+    
+    .relative-grdf {
+        position: relative;
+        left: 0;
+        top: 0;
+        /* margin-left: 50px; */
+    }
+    
+    .relative-far {
+        width: 50px;
+        height: 50px;
+        background-color: purple;
+        margin-left: 50px;
+    }
+    
+    .fixed {
+        position: fixed;
+        right: 0;
+    }
+</style>
+
+</html>
